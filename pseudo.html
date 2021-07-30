@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo </title>
+    <style>
+        h1::before {
+            content: 'Hello';
+            color: aqua;
+        }
+
+        h1::after {
+            content: 'Good bye';
+            color: orangered;
+        }
+
+        blockquote::before {
+            content: open-quote;
+            color: orangered;
+            font-size: 1em;
+        }
+
+        blockquote::after {
+            content: close-quote;
+            color: orangered;
+            font-size: 1em;
+        }
+
+        .section-title::after {
+            display: inline-block;
+        }
+
+        .section-title::after :hover.section-title::before {
+            content: '';
+            background-color: orangered;
+            display: block;
+            height: 2px;
+            width: 100%;
+
+        }
+    </style>
+</head>
+
+<h1> Having fun with pseudo elements. </h1>
+
+<h1> Having fun with pseudo elements and Others. </h1>
+<section>
+    <h2 class="section-title"> Best Quotes</h2>
+    <blockquote>Time is a created thing. To say I don’t have time is to say I don’t want to.-
+    </blockquote> <strong>Lao Tzu</strong>
+
+</section>
+
+<body>
+
+</body>
+
+</html>
